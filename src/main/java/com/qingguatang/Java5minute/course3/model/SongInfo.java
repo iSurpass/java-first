@@ -8,7 +8,7 @@ public class SongInfo {
     private String albumName;
     private int commentCount;
     private String lyrics;
-    private String albumlmg;
+    private String albumImg;
 
     public String getName() {
         return name;
@@ -50,11 +50,11 @@ public class SongInfo {
         this.lyrics = lyrics;
     }
 
-    public String getAlbumlmg() {
-        return albumlmg;
+    public String getAlbumImg() {
+        return albumImg;
     }
 
-    public void setAlbumlmg(String albumlmg) {
-        this.albumlmg = albumlmg;
+    public void setAlbumImg(String albumImg) {
+        this.albumImg = albumImg;
     }
 }

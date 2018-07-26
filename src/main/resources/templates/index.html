@@ -11,5 +11,18 @@
         <label>歌手</label>
         <span th:text="${song.singer}"></span>
     </h3>
+    <h3>
+        <label>所属专辑</label>
+        <span th:text="${song.albumName}"></span>
+    </h3>
+    <h3>
+        <label>歌词</label>
+        <span th:utext="${song.lyrics}"></span>
+    </h3>
+    <h3>
+        <label>评论数</label>
+        <span th:text="${song.commentCount}"></span>
+    </h3>
+
 </body>
 </html>
