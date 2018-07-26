@@ -1,0 +1,60 @@
+package com.qingguatang.Java5minute.course3.model;
+
+import java.security.SecureRandom;
+
+public class SongInfo {
+    private String name;
+    private String singer;
+    private String albumName;
+    private int commentCount;
+    private String lyrics;
+    private String albumlmg;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSinger() {
+        return singer;
+    }
+
+    public void setSinger(String singer) {
+        this.singer = singer;
+    }
+
+    public String getAlbumName() {
+        return albumName;
+    }
+
+    public void setAlbumName(String albumName) {
+        this.albumName = albumName;
+    }
+
+    public int getCommentCount() {
+        return commentCount;
+    }
+
+    public void setCommentCount(int commentCount) {
+        this.commentCount = commentCount;
+    }
+
+    public String getLyrics() {
+        return lyrics;
+    }
+
+    public void setLyrics(String lyrics) {
+        this.lyrics = lyrics;
+    }
+
+    public String getAlbumlmg() {
+        return albumlmg;
+    }
+
+    public void setAlbumlmg(String albumlmg) {
+        this.albumlmg = albumlmg;
+    }
+}
