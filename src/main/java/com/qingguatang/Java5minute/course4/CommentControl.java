@@ -19,7 +19,7 @@ public class CommentControl {
     @RequestMapping(value = "/comments")
     public String comments(ModelMap modelMap){
 
-        List<Comment> comments =commentPostControl.getComments("345890");
+        List<Comment> comments =commentPostControl.getComments("35847388");
         modelMap.addAttribute("comments",comments);
 
         return "comments";

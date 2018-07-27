@@ -5,6 +5,15 @@ import java.util.Date;
 public class Comment {
     private String icon;
     private String nickName;
+    private String id;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getIcon() {
         return icon;
@@ -22,13 +31,6 @@ public class Comment {
         this.nickName = nickName;
     }
 
-    public String getComment() {
-        return comment;
-    }
-
-    public void setComment(String comment) {
-        this.comment = comment;
-    }
 
     public Date getCommentTime() {
         return commentTime;
@@ -46,7 +48,16 @@ public class Comment {
         this.likeNum = likeNum;
     }
 
-    private String comment;
+    private String content;
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
     private Date commentTime;
     private int likeNum;
 }

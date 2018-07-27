@@ -17,6 +17,7 @@ public class CommentPostControl {
     public String post(@RequestParam(value = "songId") String songId, Comment comment){
 
         Date commentTime = new Date();
+
         comment.setCommentTime(commentTime);
 
         comments.computeIfAbsent(songId,k->new ArrayList<>()).add(comment);
