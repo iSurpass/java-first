@@ -1,14 +1,10 @@
 package com.qingguatang.Java5minute.course3.model;
 
-import java.security.SecureRandom;
-
 public class SongInfo {
     private String name;
     private String singer;
     private String albumName;
     private int commentCount;
-    private String lyrics;
-    private String albumImg;
 
     public String getName() {
         return name;
@@ -57,4 +53,7 @@ public class SongInfo {
     public void setAlbumImg(String albumImg) {
         this.albumImg = albumImg;
     }
+
+    private String lyrics;
+    private String albumImg;
 }
