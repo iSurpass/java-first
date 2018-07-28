@@ -3,10 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>网易云音乐</title>
+    <script src="/jquery-3.3.1.min.js"></script>
 </head>
 <body>
     <img th:src="${song.albumImg}" />
     <h1 th:text="${song.name}"></h1>
+
+    <a href="#"  class="play-btn">播放</a>
+    <audio id="player" style="display: none;" src="" controls="controls"></audio>
+
     <h3>
         <label>歌手</label>
         <span th:text="${song.singer}"></span>
@@ -24,5 +29,28 @@
         <span th:text="${song.commentCount}"></span>
     </h3>
 
+    <script>
+
+        $(function () {
+            $('.play-btn').on('click',function (e) {
+                e.preventDefault();
+
+                $.ajax({
+                    url:"/song/music",
+                    method:"GET",
+                    data:{
+                        songId:"35847388"
+                    },
+                cache :false
+                })
+                .done(function (data) {
+                    $('#player').show();
+                    $('#player').attr('src',data);
+                    document.getElementById('player').play();
+                });
+            });
+        });
+
+    </script>
 </body>
 </html>
