@@ -20,20 +20,11 @@ public class SongInfoControl {
     @RequestMapping(value = "/songinfo")
     public String index (String songId,ModelMap modelMap){
         if(songId==null){
-            songId = "3587388";
+            songId = "35847388";
         }
 
         SongInfo songInfo = songInfoMap.get(songId);
 
-
-       /* SongInfo songInfo = new SongInfo();
-        songInfo.setName("Hello");
-        songInfo.setSinger("Adele");
-        songInfo.setAlbumName("Hello");
-        songInfo.setCommentCount(10);
-        songInfo.setAlbumImg("http://p1.music.126.net/PrO7oPvnjvH4xdujdGbf2w==/1407374890649284.jpg?param=130y130");
-        songInfo.setLyrics("Hello, it's me<br/>你好吗 是我<br/>I was wondering if after all these years you'd like to meet<br/>我犹豫着要不要给你来电 不确定多年后你是否还愿相见");
-       */
         modelMap.addAttribute("song",songInfo);
 
         return "index" ;

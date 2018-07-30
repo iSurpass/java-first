@@ -9,7 +9,7 @@
     <img class="song-albumImg" th:src="${song.albumImg}" />
     <h1 class="song-name" th:text="${song.name}"></h1>
 
-    <a href="#" th:data-id="${song.id}"  class="play-btn">播放</a>
+    <a href="#" th:data-id="${song.id}"  class="player-btn">播放</a>
     <audio id="player" style="display: none;" src="" controls="controls"></audio>
 
     <h3>
@@ -32,14 +32,14 @@
     <ul>
         <li>
             <a href="#" class="change-song" data-id="16435049" >Someone like you</a>
-            <a href="#" class="play-btn" data-id="16435049" >▶</a>
+            <a href="#" class="player-btn" data-id="16435049" >播放</a>
         </li>
     </ul>
 
     <script>
 
         $(function () {
-            $('.play-btn').on('click',function (e) {
+            $('.player-btn').on('click',function (e) {
                 e.preventDefault();
                 var songId = $(this).data("id");
                 $.ajax({
@@ -57,7 +57,7 @@
                 });
             });
 
-            $('.change-song').on('click',function (e) {
+            $(".change-song").on('click',function (e) {
                 e.preventDefault();
                 var songId = $(this).data("id");
                 $.ajax({
